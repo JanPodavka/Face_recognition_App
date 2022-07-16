@@ -1,0 +1,35 @@
+ #:import NoTransition kivy.uix.screenmanager.NoTransition
+
+#:include screen_log.kv
+#:include screen_welcome.kv
+#:include screen_addface.kv
+#:include screen_detection.kv
+#:include screen_cam.kv
+WindowManager:
+    LoginWindow:
+    WelcomeWindow:
+    AddfaceWindow:
+    DetectionWindow:
+    CamWindow:
+
+
+#Nastavení
+<ScreenManager>:
+    transition: NoTransition()
+
+#Tamplaty
+<Navbar@BoxLayout>:
+
+#Screeny
+
+<LoginWindow>:
+<RegistrationWindow>:
+<WelcomeWindow>:
+<AddfaceWindow>:
+<DetectionWindow>:
+<CamWindow>:
+
+
+
+
+

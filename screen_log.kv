@@ -1,0 +1,49 @@
+<LoginWindow>:
+    name:'login'
+
+
+
+    MDCard:
+        pos_hint: {"center_x": .5, "center_y": .5}
+        size_hint: .75, .75
+        elevation: 10
+        padding: 10
+        MDBoxLayout:
+            padding: 10
+            spacing: "25dp"
+            orientation: 'vertical'
+            size: root.width, root.height
+            BoxLayout:
+                pos_hint: {"center_x": .5, "center_y": .5}
+                size_hint_y: 1
+                Image:
+                    source: 'Images/logo2.png'
+                    allow_stretch: True
+                    pos_hint: {"center_x": .5, "center_y": .3}
+
+
+            BoxLayout:
+                spacing: 10
+                orientation: "vertical"
+                BoxLayout:
+                    size_hint: 1,0.5
+
+                Button:
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: .3,1
+                    background_color: 0, 0, 255, 0.6
+                    text: "Spustit"
+                    on_press: app.root.current = 'welcome'
+
+                Button:
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: .3,1
+                    background_color: 255,0,0,0.8
+                    text: "Ukončit"
+                    on_press: quit()
+                BoxLayout:
+                    size_hint: 1,0.3
+
+
+
+

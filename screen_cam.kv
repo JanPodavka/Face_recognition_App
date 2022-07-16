@@ -1,0 +1,129 @@
+<CamWindow>:
+    name:"cam"
+    MDBoxLayout:
+        pos_hint: {"center_x": .5, "center_y": .965}
+        size_hint: 1, .08
+
+        Button:
+            text: "Najít osobu"
+            background_color: (0, 0, 1, .8)
+            font_size: 0.32 * self.height
+            on_press:
+                app.root.current = 'addface'
+        Button:
+            text: "Webkamera"
+            background_color: (0, 0, 1, .35)
+            font_size: 0.32 * self.height
+            on_press:
+                app.root.current = 'cam'
+        Button:
+            text: "Fotografie"
+            background_color: (0, 0, 1, .8)
+            font_size: 0.32 * self.height
+            on_press:
+                app.root.current = 'detection'
+
+        FitImage:
+            source: 'Images/logo2.png'
+            background_color: (.0, 191/255, 1, 1)
+
+
+    BoxLayout:
+        size_hint: 1, .9
+        spacing:10
+
+        ## Volbas
+        MDCard:
+            size_hint: .35,1
+            BoxLayout:
+                orientation: "vertical"
+                MDLabel:
+                    font_style: "H4"
+                    size_hint: 1,.15
+                    text: "Nastavení"
+                    halign: "center"
+                BoxLayout:
+                    orientation: "vertical"
+                    BoxLayout:
+                        size_hint: 1, 0.6
+                        spacing:5
+                        orientation: "vertical"
+                        MDLabel:
+                            font_style: "H6"
+                            text: "Detektory"
+                            halign: "center"
+                        Button:
+                            id: hog
+                            text: "HOG"
+                            background_color: 0, 0, 255, 0.6
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            size_hint: 0.5, 0.5
+                            on_press:
+                                root.pressed_hog()
+                        Button:
+                            id: vj
+                            text: "Viola-Jones"
+                            #background_color: 0, 230, 0, 0.6
+                            background_color: 0, 0, 255, 0.6
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            size_hint: 0.5, 0.5
+                            on_press:
+                                root.pressed_vj()
+                        Button:
+                            id: hsv
+                            text: "HSV detekce"
+                            background_color: 0, 0, 255, 0.6
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            size_hint: 0.5, 0.5
+                            on_press:
+                                root.pressed_hsv()
+                        # Rozeznávání
+
+                    BoxLayout: # rozpoznávání
+                        size_hint: 1, 0.6
+                        spacing:5
+                        orientation: "vertical"
+                        MDLabel:
+                            font_style: "H6"
+                            text: "Identifikace"
+                            halign: "center"
+                        Button:
+                            id: face_rec
+                            text: "face_rec"
+                            background_color: 0, 0, 255, 0.6
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            size_hint: 0.5, 0.5
+                            on_press:
+                                root.pressed_face_rec()
+                        Button:
+                            id: pca
+                            text: "PCA"
+                            #background_color: 0, 230, 0, 0.6
+                            background_color: 0, 0, 255, 0.6
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            size_hint: 0.5, 0.5
+                            on_press:
+                                root.pressed_pca()
+                        Button:
+                            id: mace
+                            text: "MACE"
+                            background_color: 0, 0, 255, 0.6
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            size_hint: 0.5, 0.5
+                            on_press:
+                                root.pressed_mace()
+                    BoxLayout:
+                        size_hint: 0.1,0.1
+
+
+            #Místo pro volbu dalších věci
+
+        MDBoxLayout:
+            size_hint: .65,1
+            orientation: 'vertical'
+            Image: #WEBKAMERA
+                id: image
+
+
+
+

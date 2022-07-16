@@ -1,0 +1,58 @@
+<WelcomeWindow>:
+    name:"welcome"
+    MDBoxLayout:
+        pos_hint: {"center_x": .5, "center_y": .965}
+        size_hint: 1, .08
+        Button:
+            text: "Najít osobu"
+            background_color: (0, 0, 1, .8)
+            font_size: 0.32 * self.height
+            on_press:
+                app.root.current = 'addface'
+        Button:
+            text: "Webkamera"
+            background_color: (0, 0, 1, .8)
+            font_size: 0.32 * self.height
+            on_press:
+                app.root.current = 'cam'
+        Button:
+            text: "Fotografie"
+            background_color: (0, 0, 1, .8)
+            font_size: 0.32 * self.height
+            on_press:
+                app.root.current = 'detection'
+
+        FitImage:
+            source: 'Images/logo2.png'
+            background_color: (.0, 191/255, 1, 1)
+
+    BoxLayout:
+        orientation: 'vertical'
+        pos_hint: {"center_x": .5, "center_y": .5}
+        size_hint: .5, .4
+        MDLabel:
+            pos_hint: {"center_x": .5, "center_y": .5}
+            size_hint: 1, .2
+            text: "Systém pro automatické detekování a identifikaci osob na základě digitálního obrazu obličeje"
+            bold: True
+            halign: "center"
+            font_size: .7 * self.height
+#        MDLabel:
+#            id: main_day_of_week
+#            font_size: .3 * self.height
+#            size_hint: 1, .2
+#            pos_hint: {"center_x": .5, "center_y": .5}
+#            halign: "center"
+        MDLabel:
+            pos_hint: {"center_x": .5, "center_y": .5}
+            #size_hint: 1, .2
+            #text: "Semestrální projekt"
+            halign: "center"
+            font_size: .7 * self.height
+
+    MDLabel:
+        size_hint: 1, .2
+        pos_hint: {"center_x": .5, "center_y": .5}
+        text: "Semestrální projekt"
+        halign: "center"
+        #font_size: .7
