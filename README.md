@@ -12,7 +12,7 @@ A 3 metody identifikace:
 
 - PCA
 - Návržené filtry MACE
-- knihovnu face_recognition(Deep matric learning) - knihovna face_recognition
+- Deep matric learning - knihovna face_recognition
 
 <img src="https://github.com/JanPodavka/Face_recognition_App/blob/main/Images/porovn%C3%A1n%C3%AD%20detekce.png">
 
