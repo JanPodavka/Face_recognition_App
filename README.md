@@ -1,12 +1,20 @@
-# Face_recognition_App
+# Aplikace
 
-## main.py
+spuštění přes skript main.py
 
-- aplikace sloužící prozatím pro stahování základního datasetu pro testování metod
+Aplikace využívá 3 metody detekce:
 
-- přihlásit -> přidat osobu
+- Viola - Jones (HAAR)
+- Histogram orientovaných gradientů (HOG)
+- Segmentace v barevném prostoru HSV
 
-- Zadáním jména osoby a vyhledáním dojde ke stažení 9 fotek dané osoby
+A 3 metody identifikace:
+
+- PCA
+- Návržené filtry MACE
+- knihovnu face_recognition(Deep matric learning)
+
+Samotná aplikace umožňuje funkcionality:
 
 ## testing.py
 
