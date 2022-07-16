@@ -24,9 +24,9 @@ Samotná aplikace umožňuje funkcionality:
 
 - Testování metod na videokameře
 
-<img src="https://github.com/JanPodavka/Face_recognition_App/blob/main/Images/2.png">
-
 - Stažení 9 fotografií osob dle zadaného jména:
+
+<img src="https://github.com/JanPodavka/Face_recognition_App/blob/main/Images/2.png">
 
 
 ## testing.py
