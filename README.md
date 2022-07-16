@@ -4,17 +4,30 @@ spuštění přes skript main.py
 
 Aplikace využívá 3 metody detekce:
 
-- Viola - Jones (HAAR)
-- Histogram orientovaných gradientů (HOG)
+- Viola - Jones (HAAR) - knihovna openCV
+- Histogram orientovaných gradientů (HOG) - knihovna DLIB
 - Segmentace v barevném prostoru HSV
 
 A 3 metody identifikace:
 
 - PCA
 - Návržené filtry MACE
-- knihovnu face_recognition(Deep matric learning)
+- knihovnu face_recognition(Deep matric learning) - knihovna face_recognition
+
+<img src="https://github.com/JanPodavka/Face_recognition_App/blob/main/Images/porovn%C3%A1n%C3%AD%20detekce.png">
 
 Samotná aplikace umožňuje funkcionality:
+
+- Testování metod na libovolném obrázku:
+
+<img src="https://github.com/JanPodavka/Face_recognition_App/blob/main/Images/1.png">
+
+- Testování metod na videokameře
+
+<img src="https://github.com/JanPodavka/Face_recognition_App/blob/main/Images/2.png">
+
+- Stažení 9 fotografií osob dle zadaného jména:
+
 
 ## testing.py
 
